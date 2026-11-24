@@ -3,14 +3,14 @@
 
 export ETH_RPC_URL=http://127.0.0.1:8546
 
-# 待合室（mempool）の中身を 1 行ずつ出す
+# 順番を待つ取引の列（mempool）の中身を 1 行ずつ出す
 show_pool() {
   cast rpc txpool_content | python3 -c '
 import json, sys
 d = json.load(sys.stdin)
 rows = [(k, a, n, t) for k in d for a in d[k] for n, t in d[k][a].items()]
 if not rows:
-    print("(待合室は空)")
+    print("(行列は空)")
 for k, a, n, t in rows:
     fee = int(t.get("maxFeePerGas") or t["gasPrice"], 16) / 1e9
     print(k, a, "nonce", n, fee, "gwei", "setNumber", int(t["input"][-8:], 16))
