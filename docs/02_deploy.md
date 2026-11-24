@@ -2,7 +2,7 @@
 
 [演習 1](01_own_chain.md) の続きです。anvil は動かしたまま進めます。
 
-使うのは [../src/Counter.sol](../src/Counter.sol) です。数を 1 つ覚えるだけのコントラクトです。
+使うのは [../src/Counter.sol](../src/Counter.sol) です。数を 1 つ覚えるだけのコントラクトです。`.sol` のファイルと Solidity については、[用語集](glossary.md#solidityソリディティと-sol-のファイル) に書きました。
 
 ```solidity
 contract Counter {
@@ -38,7 +38,7 @@ cast code $C
 forge create src/Counter.sol:Counter --unlocked --from $A --broadcast --rpc-url $ETH_RPC_URL
 ```
 
-出るはずの結果（最初の 1 回は、コンパイラーの取得とコンパイルの表示が先に出ます）:
+出るはずの結果（最初の 1 回は、コンパイルの表示が先に出ます）:
 
 ```
 Deployer: 0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266

@@ -17,6 +17,8 @@
 | 2 | [docs/02_deploy.md](docs/02_deploy.md) | コントラクトをデプロイする。空のチェーンには何もない |
 | 3 | [docs/03_mempool.md](docs/03_mempool.md) | mempool（待合室）と、ブロックの中の順番。送った順ではなく、手数料の順で実行される |
 
+道具の名前（Foundry、anvil、forge、cast）、`.sol` のファイルと Solidity、そのほかの言葉は、[用語集](docs/glossary.md) にまとめています。
+
 **1 → 2 → 3 の順に、同じ anvil を動かしたまま進めてください。** 後ろの演習は、前の演習で作った状態（デプロイしたコントラクト、ブロック番号）を使います。
 
 ## なぜ自分でチェーンを持つのか
@@ -27,7 +29,7 @@
 
 ## 要るもの
 
-- **Foundry**（`anvil`、`forge`、`cast`）。入れ方は [公式の手順](https://getfoundry.sh/) にあります。この演習は 1.8.3 で確かめました。
+- **Foundry**（`anvil`、`forge`、`cast`）。Ethereum のアプリを作るための、道具のセットです（[用語集](docs/glossary.md#foundryファウンドリー)）。入れ方は [公式の手順](https://getfoundry.sh/) にあります。この演習は 1.8.3 で確かめました。
 - **Python 3**。`helpers.sh` が、結果を読みやすく並べるのに使います（標準ライブラリだけ）。
 - macOS か Linux のターミナル（`bash` か `zsh`）。確かめたのは macOS の `zsh` です。
 
@@ -117,7 +119,8 @@ anvil-chain-primer/
 └── docs/
     ├── 01_own_chain.md
     ├── 02_deploy.md
-    └── 03_mempool.md
+    ├── 03_mempool.md
+    └── glossary.md         # 用語集
 ```
 
 ## ライセンス
